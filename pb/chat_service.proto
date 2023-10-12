@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/AnuragProg/go-grpc-prac_4";
+
+
+message Message{
+	string msg = 1;
+}
+
+
+service ChatService{
+	
+	rpc Converstion(stream Message) returns (stream Message) {}
+
+}
